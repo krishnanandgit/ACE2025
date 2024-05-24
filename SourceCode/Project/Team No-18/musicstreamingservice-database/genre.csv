@@ -1,0 +1,51 @@
+genreID,name
+1,Rock
+10,Blues
+11,Folk
+12,Metal
+13,Punk
+14,Soul
+15,Gospel
+16,Latin
+17,Reggaeton
+18,Ska
+19,Disco
+2,Pop
+20,Funk
+21,Techno
+22,House
+23,Trance
+24,Dubstep
+25,"Drum and Bass"
+26,Garage
+27,Grime
+28,Dance
+29,Indie
+3,Jazz
+30,Alternative
+31,Hardcore
+32,Emo
+33,Synthpop
+34,K-Pop
+35,J-Pop
+36,C-Pop
+37,Mandopop
+38,Cantonpop
+39,"Operatic pop"
+4,Classical
+40,Choral
+41,Orchestral
+42,Soundtrack
+43,"World Music"
+44,"New Age"
+45,Ambient
+46,Experimental
+47,Progressive
+48,Swing
+49,"Big Band"
+5,Hip-Hop
+50,Bluegrass
+6,Country
+7,Electronic
+8,R&B
+9,Reggae
