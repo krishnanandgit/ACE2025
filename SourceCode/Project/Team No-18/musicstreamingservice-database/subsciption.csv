@@ -1,0 +1,51 @@
+subscriptionID,name,price
+S1,Basic,9.99
+S10,"Annual Plus",109.99
+S11,"Basic Ultra",12.99
+S12,"Premium Ultra",18.99
+S13,"Family Ultra",23.99
+S14,"Student Ultra",6.99
+S15,"Annual Ultra",119.99
+S16,"Basic Max",13.99
+S17,"Premium Max",19.99
+S18,"Family Max",24.99
+S19,"Student Max",7.99
+S2,Premium,14.99
+S20,"Annual Max",129.99
+S21,"Basic Prime",14.99
+S22,"Premium Prime",20.99
+S23,"Family Prime",25.99
+S24,"Student Prime",8.99
+S25,"Annual Prime",139.99
+S26,"Basic Supreme",15.99
+S27,"Premium Supreme",21.99
+S28,"Family Supreme",26.99
+S29,"Student Supreme",9.99
+S3,Family,19.99
+S30,"Annual Supreme",149.99
+S31,"Basic Elite",16.99
+S32,"Premium Elite",22.99
+S33,"Family Elite",27.99
+S34,"Student Elite",10.99
+S35,"Annual Elite",159.99
+S36,"Basic Pro",17.99
+S37,"Premium Pro",23.99
+S38,"Family Pro",28.99
+S39,"Student Pro",11.99
+S4,Student,4.99
+S40,"Annual Pro",169.99
+S41,"Basic Advanced",18.99
+S42,"Premium Advanced",24.99
+S43,"Family Advanced",29.99
+S44,"Student Advanced",12.99
+S45,"Annual Advanced",179.99
+S46,"Basic Ultimate",19.99
+S47,"Premium Ultimate",25.99
+S48,"Family Ultimate",30.99
+S49,"Student Ultimate",13.99
+S5,Annual,99.99
+S50,"Annual Ultimate",189.99
+S6,"Basic Plus",11.99
+S7,"Premium Plus",17.99
+S8,"Family Plus",21.99
+S9,"Student Plus",5.99
