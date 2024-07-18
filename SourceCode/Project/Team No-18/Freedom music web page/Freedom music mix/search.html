@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - MusicStream</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            background-image: url(Images/s1.avif);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+		.logo img {
+            width: 250px;
+            height:flex;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            background-color: #282828;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .search-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .result-item {
+            background-color: #181818;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .result-item img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .result-item p {
+            margin: 5px 0;
+        }
+        .result-type {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+		nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+           <div class="logo">
+                <img src="Images/logo 2.png" alt="Freedom MusicMix Logo">
+            </div>
+            <nav>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			<ul>
+            </nav>
+        </header>
+
+        <main>
+            <input type="text" class="search-bar" placeholder="Search for songs, artists, or albums">
+
+            <div class="search-results">
+                <div class="result-item">
+                    <img src="Images/song1.jpeg" alt="Result 1">
+                    <p>The Death of Slim Shady </p>
+                    <p>Eminem</p>
+                    <p class="result-type">Song</p>
+                </div>
+                <div class="result-item">
+                    <img src="Images/song2.webp" alt="Result 2">
+                    <p>Midnights by Taylor Swift</p>
+                    <p>Taylor Swift</p>
+                    <p class="result-type">Album</p>
+                </div>
+                <div class="result-item">
+                    <img src="Images/artist1.webp" alt="Result 3">
+                    <p>Justin Bieber</p>
+                    <p class="result-type">Artist</p>
+                </div>
+         
+            </div>
+        </main>
+    </div>
+</body>
+</html>

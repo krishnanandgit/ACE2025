@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song - MusicStream</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+		.logo img {
+            width: 250px;
+            height:flex;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .song-info {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .song-cover {
+            width: 300px;
+            height: 300px;
+            margin-right: 30px;
+        }
+        .song-details h1 {
+            margin-bottom: 10px;
+        }
+        .player-controls {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .play-button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .progress-bar {
+            flex-grow: 1;
+            height: 5px;
+            background-color: #282828;
+            position: relative;
+        }
+        .progress {
+            width: 30%;
+            height: 100%;
+            background-color: #1db954;
+        }
+        .lyrics {
+            background-color: #181818;
+            padding: 20px;
+            border-radius: 8px;
+        }
+		nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="Images/logo 2.png" alt="Freedom MusicMix Logo">
+            </div>
+            <nav>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			<ul>
+             
+            </nav>
+        </header>
+
+        <main>
+            <div class="song-info">
+                <img src="Images/son.webp" alt="Song Cover" class="song-cover">
+                <div class="song-details">
+                    <h1>Mohe Rang Do Laal</h1>
+                    <p>Artist: Shreya Ghoshal</p>
+                    <p>Album: Deewani Mastani</p>
+                    <p>Release Date: January 1, 2017</p>
+                    <p>Genre: Classic</p>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <button class="play-button">Play</button>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <div class="lyrics">
+                <h2>Lyrics</h2>
+                <p>
+                    Mohe rang do laal<br>
+Mohe rang do laal<br>
+Nand ke laal laal<br>
+Chhedo nahi bas rang do laal<br>
+Mohe rang do laal<br>
+
+
+Dekhu dekhu tujhko main hoke nihaal<br>
+Dekhu dekhu tujhko main hoke nihaal<br>
+Chhu lo kora mora kaanch sa tann<br>
+Nain bhar kya rahe nihaar<br>
+Mohe rang do laal<br>
+Nand ke laal laal<br>
+Chhedo naahi bas rang do laal<br>
+
+Mohe rang do laal<br>
+
+Marodi kalaai mori<br>
+Marodi kalaai mori<br>
+Haan kalaai mori<br>
+Haan kalaai marodi.. kalaai mori<br>
+Churri chatkai ittrai<br>
+Toh chori se garwa lagai..........<br>
+
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - MusicStream</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .payment-form {
+            background-color: #181818;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input, select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #282828;
+            color: #ffffff;
+        }
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card-details input {
+            width: 48%;
+        }
+        button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+		nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+		.logo img {
+            width: 250px;
+            height:flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+		<div class="logo">
+                <img src="Images/logo 2.png" alt="Freedom MusicMix Logo">
+            </div>
+          
+            <nav>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			<ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Payment</h1>
+            
+            <div class="payment-form">
+                <h2>Enter Payment Details</h2>
+                <form>
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" required>
+                    
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" required>
+                    
+                    <div class="card-details">
+                        <input type="text" placeholder="MM/YY" required>
+                        <input type="text" placeholder="CVV" required>
+                    </div>
+                    
+                    <label for="country">Country</label>
+                    <select id="country" required>
+                        <option value="">Select Country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                    </select>
+                    
+                    <label for="zip">ZIP/Postal Code</label>
+                    <input type="text" id="zip" required>
+                    
+                    <button type="submit">Pay Now</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

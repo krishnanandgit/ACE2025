@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist List</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+   font-family: Arial, sans-serif;
+    background-color:white;
+  
+}
+
+.header {
+    background-color: #673ab7;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-icon, .user-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.manage-header {
+    background-color: #673ab7;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.action-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-icons a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.view-icon { color: #2196F3; }
+.edit-icon { color: #FFC107; }
+.delete-icon { color: #F44336; }
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #135cbd;
+}
+    </style>
+</head>
+<header class="header">
+    <a href="ArtistList.html" class="home-icon">🏠</a>
+    <span>Artist Management</span>
+    <span class="user-icon">👤</span>
+</header>
+
+<div class="container">
+<div class="manage-header">
+    <h1>Manage Artists</h1>
+    <a href="ArtistCreate.html" class="add-button">ADD</a>
+</div>
+<body>
+
+    <h1>Artist List</h1>
+    <a href="ArtistCreate.html">Add New Artist</a>
+    <table id="artistTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Artist Name</th>
+                <th>Genre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        let artists = JSON.parse(localStorage.getItem('artists')) || [];
+
+        function displayArtists() {
+            const tableBody = document.querySelector("#artistTable tbody");
+            tableBody.innerHTML = "";
+
+            artists.forEach(artist => {
+                const row = tableBody.insertRow();
+                row.innerHTML = `
+                    <td>${artist.id}</td>
+                    <td>${artist.name}</td>
+                    <td>${artist.genre}</td>
+                    <td>
+                           <a href="ArtistShow.html?id=${artist.id}" class="view-icon">👁️</a>
+    <a href="ArtistEdit.html?id=${artist.id}" class="edit-icon">✏️</a>
+    <a href="ArtistDelete.html?id=${artist.id}" class="delete-icon">🗑️</a>
+                    </td>
+                `;
+            });
+        }
+
+        // Initial display
+        displayArtists();
+    </script>
+</body>
+</div>
+</html>
