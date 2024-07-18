@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<style>
+
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #d5b52a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+main {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.help-section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-item h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    color: #666;
+    margin-top: 5px;
+}
+
+form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d9d426;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #c8c637;
+}
+
+
+
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Online Auction Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Help - Online Auction Platform</h1>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section id="create-account" class="help-section">
+                <h2>Creating an Account</h2>
+                <p>To participate in auctions, you need to create an account. Follow these steps:</p>
+                <ol>
+                    <li>Go to the <a href="index.html">Home Page</a>.</li>
+                    <li>Click on "Sign Up" or "Register".</li>
+                    <li>Fill in the required information (name, email, password).</li>
+                    <li>Click "Submit" or "Create Account".</li>
+                    <li>You will receive a confirmation email. Click the link to activate your account.</li>
+                </ol>
+            </section>
+            
+            <section id="place-bid" class="help-section">
+                <h2>Placing a Bid</h2>
+                <p>To bid on an item, follow these steps:</p>
+                <ol>
+                    <li>Log in to your account.</li>
+                    <li>Find the item you want to bid on.</li>
+                    <li>Enter your bid amount in the designated field.</li>
+                    <li>Click "Place Bid".</li>
+                    <li>If your bid is the highest when the auction ends, you win!</li>
+                </ol>
+            </section>
+            
+            <section id="faq" class="help-section">
+                <h2>FAQs</h2>
+                <div class="faq-item">
+                    <h3>How do I pay for items I win?</h3>
+                    <p>Payment methods and procedures vary. Generally, you'll receive instructions after winning an auction.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I retract a bid?</h3>
+                    <p>Unfortunately, once placed, bids cannot be retracted. Please bid carefully.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I contact customer support?</h3>
+                    <p>You can reach our customer support team through the contact form on our website or via email at support@example.com.</p>
+                </div>
+            </section>
+            
+            <section id="queries" class="help-section">
+                <h2>Still have questions?</h2>
+                <form action="#" method="post" id="query-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="query">Your Query:</label>
+                        <textarea id="query" name="query" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit Query</button>
+                </form>
+            </section>
+            
+            <section id="feedback" class="help-section">
+                <h2>Feedback</h2>
+                <p>We value your feedback. Please share your thoughts about our platform.</p>
+                <form action="#" method="post" id="feedback-form">
+                    <div class="form-group">
+                        <label for="feedback-message">Your Feedback:</label>
+                        <textarea id="feedback-message" name="feedback-message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

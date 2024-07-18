@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bid Now</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container .card {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.container .card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFDF00;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after {
+  content: 'Antique';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.05);
+}
+
+.container .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(0%);
+}
+
+.container .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 200px;
+}
+
+.container .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container .card:hover .contentBx {
+  height: 210px;
+}
+
+.container .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.container .card .contentBx .size,
+.container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container .card:hover .contentBx .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container .card .contentBx .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover {
+  background: #FFDF00;
+}
+
+.container .card .contentBx .color span {
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2) {
+  background: #9bdc28;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+  background: #03a9f4;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+  background: #e91e63;
+}
+
+.container .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.container .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <div class="imgBx">
+      <img src="https://www.hamiltonwatch.com/tenet-assets/images/poster-watch-red.png">
+    </div>
+    <div class="contentBx">
+      <h2>Hamilton Watch</h2>
+      <h3 style="color: white;">Rs 50000 </h3>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>S</span>
+        <span>M</span>
+        <span>L</span>
+  
+      </div>
+      <a href="Bid.html">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="https://i.pinimg.com/originals/f6/06/dd/f606dde7fd067049125610094ff4b243.png">
+    </div>
+    <div class="contentBx">
+      <h2>Adventure Helmet</h2>
+      <h3 style="color: white;">Rs 5000 </h3>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>S</span>
+        <span>M</span>
+        <span>L</span>
+        
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="https://www.pngall.com/wp-content/uploads/9/Mobile-Cover-No-Background.png">
+    </div>
+    <div class="contentBx">
+      <h2>Mobile</h2>
+      <h3 style="color: white;">Rs 12000</h3>
+      <div class="size">
+        <h3>Model :</h3>
+        <span>7</span>
+        <span>7s</span>
+        <span>8</span>
+        <span>8s</span>
+      </div>
+      <div class="color">
+        
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_hand.png">
+    </div>
+    <div class="contentBx">
+      <h2>Riding Gloves</h2>
+      <h3 style="color: white;">Rs 1200</h3>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_compass.png">
+    </div>
+    <div class="contentBx">
+      <h2>Compass</h2>
+      <h3 style="color: white;">Rs 14000 </h3>
+      <div class="size">
+       
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_marvel.png">
+    </div>
+    <div class="contentBx">
+      <h2>Shield</h2>
+      <h3 style="color: white;">Rs 20000 </h3>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_music.png">
+    </div>
+    <div class="contentBx">
+      <h2>Gramaphone</h2>
+      <h3 style="color: white;">Rs 10000 </h3>
+      <div class="size">
+        
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_key.png">
+    </div>
+    <div class="contentBx">
+      <h2>Cruciform Key</h2>
+      <h3 style="color: white;">Rs 30000 </h3>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>M</span>
+        <span>S</span>
+        <span>L</span>
+        
+      </div>
+      <div class="color">
+        
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_camera.png">
+    </div>
+    <div class="contentBx">
+      <h2>Camera</h2>
+      <h3 style="color: white;">Rs 40000 </h3>
+      <div class="size">
+        
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_music2.png">
+    </div>
+    <div class="contentBx">
+      <h2>Guitar</h2>
+      <h3 style="color: white;">Rs 10000 </h3>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="images/items_bike1.png">
+    </div>
+    <div class="contentBx">
+      <h2>WW2 Motorcycle</h2>
+      <h3 style="color: white;">Rs 2,50,000 </h3>
+      <div class="size">
+        
+      </div>
+      <a href="#">Bid Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgBx">
+      <img src="https://assets.codepen.io/4164355/shoes.png">
+    </div>
+    <div class="contentBx">
+      <h2>Nike Shoes</h2>
+      <h3 style="color: white;">Rs 5000 </h3>
+      <div class="size">
+        <h3>Size :</h3>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <a href="Bid.html">Bid Now</a>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

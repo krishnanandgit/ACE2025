@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidNex.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<style>
+/*nav-bar*/
+body {
+  font-family: "Lato", sans-serif;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#440c54;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:#fbe204;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color:antiquewhite;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+ 
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*card*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing:2;
+}
+
+
+h1 {
+	font-size: 5.25vmin;
+	text-align: center;
+	color: white;
+}
+
+.wrap {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width:1200px;
+	height: 65vmin;
+	margin: 2rem auto;
+	border: 8px solid;
+	border-image: linear-gradient(
+			-50deg,
+white,
+		)
+		1;
+	transition: 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
+.overlay {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 1rem 0.75rem;
+	background:black;
+	transition: 0.4s ease-in-out;
+	z-index: 1;
+}
+.overlay-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width:50vmin;
+	height: 100%;
+	padding: 0.5rem 0 0 0.5rem;
+	border: 3px solid;
+	border-image: linear-gradient(
+			to bottom,
+			#aea724 5%,
+			purple 35% 65%,
+			#aea724 95%
+		)
+		0 0 0 100%;
+	transition: 0.3s ease-in-out 0.2s;
+	z-index: 1;
+
+}
+.image-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100vmin;
+	height: 100%;
+	background-image: url("images/musicbox.jpg");
+	background-size: cover;
+	transition: 0.3s ease-in-out;
+	/* border: 1px solid green; */
+}
+
+.inset {
+	position: relative;
+  left: 100px;
+  width:200px;
+  height:200px;
+  
+
+}
+
+
+.text {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	padding: 3vmin 4vmin;
+	background: #fff;
+	box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
+	overflow-y: scroll;
+} 
+
+.wrap:hover .overlay {
+	transform: translateX(-60vmin);
+}
+.wrap:hover .image-content {
+	width: 0vmin;
+}
+.wrap:hover .overlay-content {
+	border: none;
+	transition-delay: 0.2s;
+	transform: translateX(60vmin);
+}
+.wrap:hover .dots {
+	transform: translateX(1rem);
+}
+.wrap:hover .dots .dot {
+	background: white;
+}
+
+/* Animations and timing delays */
+.animate {
+	animation-duration: 0.7s;
+	animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+	animation-fill-mode: backwards;
+}
+/* Pop In */
+.pop {
+	animation-name: pop;
+}
+@keyframes pop {
+	0% {
+		opacity: 0;
+		transform: scale(0.5, 0.5);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+/* Slide In */
+.slide {
+	animation-name: slide;
+}
+@keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translate(4em, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+/* Slide Left */
+.slide-left {
+	animation-name: slide-left;
+}
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		transform: translate(-40px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.slide-up {
+	animation-name: slide-up;
+}
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(3em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.delay-1 {
+	animation-delay: 0.3s;
+}
+.delay-2 {
+	animation-delay: 0.6s;
+}
+.delay-3 {
+	animation-delay: 0.9s;
+}
+.delay-4 {
+	animation-delay: 1.2s;
+}
+.delay-5 {
+	animation-delay: 1.5s;
+}
+.delay-6 {
+	animation-delay: 1.8s;
+}
+.delay-7 {
+	animation-delay: 2.1s;
+}
+.delay-8 {
+	animation-delay: 2.4s;
+}
+
+/*card after countdown*/
+
+
+.center {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-card {
+  width: 350px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.article-card .date,
+.article-card .title {
+  margin: 0;
+}
+
+.article-card .date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.article-card .title {
+  font-size: 17px;
+  color: #fff;
+}
+/*slider*/
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+}
+.container .btn {
+  position: absolute;
+  top: 51%;
+  left:40%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:#440c54;
+  color:white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-style: groove;
+  border-radius: 20px;
+  padding: 15px;
+  width: 180px;
+}
+.container .btn:hover {
+  background-color: #440c54;
+}
+.container .btn1{
+	position: absolute;
+  bottom:32%;
+  left:55%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:white;
+  color:#440c54;
+  font-size: 16px;
+  padding: 12px 24px;
+  border:#440c54;
+  border-style:groove;
+  padding: 15px;  
+  cursor: pointer;
+  border-radius: 20px;
+  margin:50px;
+  width:180px;
+}
+.container .btn1:hover {
+  background-color: #440c54;
+  color: white;
+}
+
+.container .para{
+  position: absolute;
+  left: 50%;
+  bottom:45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  text-align: center;
+
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1300px;
+  max-height:650px;
+  position: relative;
+  margin: auto;
+  
+  }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*floatingplus*/
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #fafbff;
+}
+.floatingButtonWrap {
+    display: block;
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    z-index: 999999999;
+}
+
+.floatingButtonInner {
+    position: relative;
+}
+
+.floatingButton {
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background:#440c54;
+    color: #fff;
+    line-height: 50px;
+    position: absolute;
+    border-radius: 50% 50%;
+    bottom: 0px;
+    right: 0px;
+    border: 5px solid #fbe204;
+    /* opacity: 0.3; */
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.floatingButton .fa {
+    font-size: 15px !important;
+}
+
+.floatingButton.open,
+.floatingButton:hover,
+.floatingButton:focus,
+.floatingButton:active {
+    opacity: 1;
+    color: #fbe204;
+}
+
+/*cards*/
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html { font-size: 62.5%; }
+
+
+/* Typography =======================*/
+
+/* Headings */
+
+/* Main heading for card's front cover */
+.card-front__heading {
+  font-size: 1.5rem;
+  margin-top: .25rem;
+}
+
+/* Main heading for inside page */
+.inside-page__heading { 
+  padding-bottom: 1rem; 
+  width: 100%;
+}
+
+/* Mixed */
+
+/* For both inside page's main heading and 'view me' text on card front cover */
+.inside-page__heading,
+.card-front__text-view {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: .2rem;
+}
+
+.inside-page__heading--city,
+.card-front__text-view--city { color: #440c54; }
+
+.inside-page__heading--ski,
+.card-front__text-view--ski { color: #fbe204; }
+
+.inside-page__heading--beach,
+.card-front__text-view--beach { color: #440c54; }
+
+.inside-page__heading--camping,
+.card-front__text-view--camping { color: #fbe204; }
+
+/* Front cover */
+
+.card-front__tp { color: #fafbfa; }
+
+/* For pricing text on card front cover */
+.card-front__text-price {
+  font-size: 1.2rem;
+  margin-top: -.2rem;
+}
+
+/* Back cover */
+
+/* For inside page's body text */
+.inside-page__text {
+  color: #333;
+}
+
+/* Icons ===========================================*/
+
+.card-front__icon {
+  fill: #fafbfa;
+  font-size: 3vw;
+  height: 3.25rem;
+  margin-top: -.5rem;
+  width: 3.25rem;
+}
+
+/* Buttons =================================================*/
+
+.inside-page__btn {
+  background-color: transparent;
+  border: 3px solid;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: .7rem .75rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .3s ease;
+  width: 90%;
+  z-index: 10;
+}
+
+.inside-page__btn::before { 
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transition: all .3s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.inside-page__btn--city { 
+  border-color:#440c54;
+  color: #440c54;
+}
+
+.inside-page__btn--city::before { 
+  background-color: #440c54;
+}
+
+.inside-page__btn--ski { 
+  border-color: #fbe204;
+  color: #fbe204;
+}
+
+.inside-page__btn--ski::before { 
+  background-color: #fbe204;
+}
+
+.inside-page__btn--beach { 
+  border-color: #440c54;
+  color: #440c54;
+}
+
+.inside-page__btn--beach::before { 
+  background-color: #440c54;
+}
+
+.inside-page__btn--camping { 
+  border-color: #fbe204;
+  color: #fbe204;
+}
+
+.inside-page__btn--camping::before { 
+  background-color:#fbe204 ;
+}
+
+.inside-page__btn:hover { 
+  color: #fafbfa;
+}
+
+.inside-page__btn:hover::before { 
+  transform: scaleY(1);
+}
+
+/* Layout Structure=========================================*/
+
+.main {
+  background: linear-gradient(
+    to bottom right,
+    #eee8dd,
+    #e3d9c6
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+}
+
+/* Container to hold all cards in one place */
+.card-area {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+/* Card ============================================*/
+
+/* Area to hold an individual card */
+.card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+/* A container to hold the flip card and the inside page */
+.card {
+  background-color: rgba(0,0,0, .05);
+  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+  height: 15rem;
+  position: relative;
+  transition: all 1s ease;
+  width: 15rem;
+}
+
+/* Flip card - covering both the front and inside front page */
+
+/* An outer container to hold the flip card. This excludes the inside page */
+.flip-card {
+  height: 15rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 15rem;
+  z-index: 100;
+}
+
+/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+/* This is done so content in the inside page can be selected */
+.flip-card > * {
+  visibility: visible;
+}
+
+/* An inner container to hold the flip card. This excludes the inside page */
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Styling for the front side of the flip card */
+
+/* container for the front side */
+.card-front {
+  background-color: #fafbfa;
+  height: 15rem;
+  width: 15rem;
+}
+
+/* Front side's top section */
+.card-front__tp {
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  justify-content: center;
+  padding: .75rem;
+}
+
+.card-front__tp--city {
+ background-color: #333;
+}
+
+.card-front__tp--ski {
+	background-color: #333;
+}
+
+.card-front__tp--beach {
+	background-color: #333;
+}
+
+.card-front__tp--camping {
+	background-color: #333;
+}
+
+/* Front card's bottom section */
+.card-front__bt {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the back side of the flip card */
+
+.card-back {
+  background-color: #fafbfa;
+  transform: rotateY(180deg);
+}
+
+/* Specifically targeting the <video> element */
+.video__container {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Inside page */
+
+.inside-page {
+  background-color: #fafbfa;
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 15rem;
+  z-index: 1;
+}
+
+.inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center; 
+  width: 100%;
+}
+
+
+/* This is to keep the card centered (within its container) when opened */
+.card:hover {
+  box-shadow:
+  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  width: 30rem;
+}
+
+/* When the card is hovered, the flip card container will rotate */
+.card:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+/* When the card is hovered, the shadow on the inside page will shrink to the left */
+.card:hover .inside-page {
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+}
+/*card*/
+div.background {
+  background: url("images/ott.webp") repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 50px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+.ott-button{
+	position: relative;
+	left:95px;
+   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:#440c54;
+  color:white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-style: groove;
+  border-radius: 20px;
+  padding: 15px;
+  width: 180px;
+}
+.ott-button:hover {
+  background-color: #440c54;
+}
+
+/*footer*/
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%; 
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%; 
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%; 
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%; 
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%; 
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%; 
+}
+
+
+</style>
+<body>
+<nav class="navbar" style="background-color: #440c54;">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="About.html">About</a>
+  <a href="Contact.html">Contact</a>
+  <a href="login.html">Login</a>
+  <a href="profile.html">Profile</a>
+  <form>
+    <input  type="search" placeholder="Search" aria-label="Search" style="height: 30px;">
+    <button type="submit" style="width: 50px;height:30px; margin:2px;">Search</button>
+  </form>
+</div>
+<span style="font-size:30px;cursor:pointer;position: relative;bottom: 5px;" onclick="openNav()">&#9776;</span>
+<img src="images/nav_img.png" width="100px" height="40px">
+<a href="profile.html">
+<i class="fa fa-user fa-3x" style="position: relative;left:1125px; color: white;position: relative;bottom: 5px;" aria-hidden="true" href="profile.html" ></i></a>
+<i class="fa fa-shopping-cart fa-3x" style="color: white;position:relative;bottom: 5px; left:875px;"></i>
+<button style="font-size:24px; position:relative;left:890px;bottom:5px;border-radius:25px;padding: 5px;
+background-color:#440c54; color: white;border:0.5px solid #fbe204;">Hyderabad
+ <i class="fa fa-map-marker"></i></button>  
+   </nav>
+<!--slider-->
+<div class="container">
+    
+<div class="slideshow-container">
+	    
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides fade">
+	  <img src="images/slide1.jpg" style="width:100%; opacity: 0.5;height:600px;">
+	  <p style="color: black; font-size: xx-large;" class="para">Bid with us<br>Let us be there for you as you navigate through the world of bidding and auctions.</p>
+	  <a href="item.html"><button class="btn">Bid Now </button></a>
+	 <a href="Auction.html" ><button class="btn1">Auction Now</button></a>
+	</div>
+  
+	<div class="mySlides fade">
+	  <img src="images/slide2.jpg" style="width:100%;opacity: 0.5;height:600px;">
+	  <p style="color: black; font-size: xx-large;" class="para">Let's Bid<br>Let us be there for you as you navigate through the world of bidding and auctions.</p>
+	  <a href="item.html"><button class="btn">Bid Now </button></a>
+	 <a href="Auction.html" ><button class="btn1">Auction Now</button></a>
+	</div>
+  
+	<div class="mySlides fade">
+	  <img src="images/slide3.jpg" style="width:100%;opacity: 0.5;height:600px;">
+	  <p style="color: black; font-size: xx-large;" class="para">Let's Bid<br>Let us be there for you as you navigate through the world of bidding and auctions.</p>
+	  <a href="item.html"><button class="btn">Bid Now </button></a>
+	 <a href="Auction.html" ><button class="btn1">Auction Now</button></a>
+	  
+	</div>
+  </div>
+	  </div>
+  <br>
+  
+ 	
+	
+<!--cards-->
+<div class="wrap animate pop">
+	<div class="overlay">
+		<div class="overlay-content animate slide-left delay-2">
+			<h1 class="animate slide-left pop delay-4"> Sony Music System</h1>
+      <button id="demo" style="color: #440c54; text-align:center;font-size:large;
+      background-color: #fbe204;position: relative;;top:5px; position: absolute;
+    right:10px;
+     background-color:#440c54;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px; outline-color: transparent;
+      outline-style:solid;
+      box-shadow:0 0 0 #fbe204;position: relative;left:10px;align-items:center;"></button>
+    <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;font-size: larger;"><strong>LIVE<br> NOW</strong></p>
+		</div>
+		<div class="image-content animate slide delay-5"></div>
+			</div>
+	<div class="text">
+		<img class="inset" src="images/musicbox.jpg">
+    <p style="position: relative;top:20px;text-align:justify;left:50px;font-size:larger;"><b>Sony Music System</b><br>Discover a wide range of<br>
+       high-quality Sony 
+      Micro Music Systems at <br>lowest price
+    <br><br><b>Rs 15987/-</b></p>
+    <button type="button" class="button" style="
+     position: absolute;
+    top:30px;
+    right: 30px;
+     background-color:#440c54;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px; outline-color: transparent;
+      outline-style:solid;
+      box-shadow:0 0 0 #fbe204;position: relative;left:150px;align-items:center;">Bid Now</button>
+  </div>
+    
+    </div>
+	<!--cards after countdown-->
+	<center><p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: larger;position: relative;left: 50px;font-size: xx-large;">
+		<strong>Auctions Viewed ⌛
+			<br>View previously viewed products by you
+		</strong> </p>
+    </center>
+		<div class="center">
+		<div class="article-card">
+		  <div class="content">
+			<p class="date" style="color: black;"><b>20 years old</b></p>
+			<p class="title" style="color: black;font-size: xx-large;">Tabla</p>
+		  </div>
+		  <img src="images/tabla.jpg" alt="article-cover" />
+		</div>
+		<div class="article-card" style="margin: 30px;">
+			<div class="content">
+			  <p class="date" style="color: white;">15 years old</p>
+			  <p class="title" style="color: white; font-size: xx-large;">Telephone</p>
+			</div>
+			<img src="images/phone.jpeg" alt="article-cover" />
+		  </div>
+		  <div class="article-card">
+			<div class="content">
+			  <p class="date" style="color: black;">10 years old</p>
+			  <p class="title" style="color: black;font-size: xx-large;" >Sofa</p>
+			</div>
+			<img src="images/sofa.jpg" alt="article-cover" />
+		  </div>
+	  </div>
+	  <!--cards-->
+		<main class="main">
+			<h1 style="color: black;">Auctions Based On Prices</h1>
+				<section class="card-area">
+	
+				<!-- Card: City -->
+				<section class="card-section">
+					<div class="card">
+						<div class="flip-card">
+							<div class="flip-card__container">
+								<div class="card-front">
+									<div class="card-front__tp card-front__tp--city">
+																
+								   </svg>
+	
+								   <h2 class="card-front__heading">
+									Products
+								</h2>
+								<br>
+								<p class="card-front__text-price">
+									From Rs 10000
+								</p>
+									</div>
+	
+									<div class="card-front__bt">
+										<p class="card-front__text-view card-front__text-view--city">
+											Bid Now
+										</p>
+									</div>
+								</div>
+								</div>
+						</div>
+	
+						<div class="inside-page">
+							<div class="inside-page__container">
+								<h3 class="inside-page__heading inside-page__heading--city">
+									Products like phones are at lowest price at BidNex 
+								</h3>
+								<a href="#" class="inside-page__btn inside-page__btn--city" style="top:1px">View deals</a>
+							</div>
+						</div>
+					</div>
+				</section>
+	
+				<!-- Card: Ski -->
+				<section class="card-section">
+					<div class="card">
+						<div class="flip-card">
+							<div class="flip-card__container">
+								<div class="card-front">
+									<div class="card-front__tp card-front__tp--ski">
+												   <h2 class="card-front__heading">
+												     Products 
+												   </h2>
+												   <br>
+												   <p class="card-front__text-price">
+													   From Rs 5000
+												   </p>
+									</div>
+	
+									<div class="card-front__bt">
+										<p class="card-front__text-view card-front__text-view--ski">
+											Bid Now
+										</p>
+									</div>
+								</div>
+	
+								</div>
+						</div>
+	
+						<div class="inside-page">
+							<div class="inside-page__container">
+								<h3 class="inside-page__heading inside-page__heading--ski" style="top: 1px;">
+									Products like watches are at lowest price at BidNex	
+								</h3>
+								<a href="#" class="inside-page__btn inside-page__btn--ski">View deals</a>
+							</div>
+						</div>
+					</div>
+				</section>
+	
+				<!-- Card: Beach -->
+				<section class="card-section">
+					<div class="card">
+						<div class="flip-card">
+							<div class="flip-card__container">
+								<div class="card-front">
+									<div class="card-front__tp card-front__tp--beach">
+										
+												   <h2 class="card-front__heading">
+													   Products
+												   </h2>
+												   <br>
+												   <p class="card-front__text-price">
+													   From Rs 12000
+												   </p>
+									</div>
+	
+									<div class="card-front__bt">
+										<p class="card-front__text-view card-front__text-view--beach">
+											Bid Now
+										</p>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+	
+						<div class="inside-page">
+							<div class="inside-page__container">
+								<h3 class="inside-page__heading inside-page__heading--beach" style="top: 1px;">
+									Products like cameras are at lowest price at BidNex
+								</h3>
+								<a href="#" class="inside-page__btn inside-page__btn--beach">View deals</a>
+							</div>
+						</div>
+					</div>
+				</section>
+	
+				<!-- Card: Camping -->
+				<section class="card-section">
+					<div class="card">
+						<div class="flip-card">
+							<div class="flip-card__container">
+								<div class="card-front">
+									<div class="card-front__tp card-front__tp--camping">
+												   <h2 class="card-front__heading">
+													   Products
+												   </h2>
+												   <br>
+												   <p class="card-front__text-price">
+													   From Rs 1000
+												   </p>
+									</div>
+	
+									<div class="card-front__bt">
+										<p class="card-front__text-view card-front__text-view--camping">
+											Bid Now
+										</p>
+									</div>
+								</div>
+								</div>
+						</div>
+	
+						<div class="inside-page">
+							<div class="inside-page__container">
+								<h3 class="inside-page__heading inside-page__heading--camping">
+									Products like books are at lowest price at BidNex
+								</h3>
+								<a href="#" class="inside-page__btn inside-page__btn--camping">View deals</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</main>
+		<!--cards-->
+		<div class="background">
+			<center>
+			<div class="transbox">
+			  <p style="font-size: xx-large;">OTT's on Auction<br>You can now bid OTT platforms at low price</p>
+			 <button type="button" class="ott-button">Bid Now</button></center>
+			</div>
+		  </div>
+		  
+		  
+	  <!--floating plus-->
+	  
+<div class="floatingButtonWrap" >
+    <div class="floatingButtonInner">
+        <a href="Auction.html" class="floatingButton">
+            <i class="fa fa-plus icon-default" ></i>
+        </a>
+    </div>
+</div>
+<!--footer-->
+<br><br><br>
+<footer class="page-footer font-small cyan darken-3">
+  
+      
+    <div class="icon" style=" background-color:black;
+	height:200px;
+	text-align: center;
+	color:#440c54;
+	font-weight: bolder;
+	font-style:normal;
+	font-size: x-large;
+	background-color:whitesmoke;
+   ">
+      <p>follow us social media</p>
+    
+      <div class="row">
+  
+         <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-youtube"></a>
+			<a href="#" class="fa fa-instagram"></a>
+            <footer>copyright &copy BidNex.com</footer>
+          
+          </div>
+        </div>
+      </div>
+   </div>
+</body>
+</html> 
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+// Set the date we're counting down to
+var countDownDate = new Date("july 22 ,2024 20:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+//slider
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>

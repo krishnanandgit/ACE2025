@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+</head>
+<style>
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 100px;
+  
+  
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+.button-wrapper canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  
+}
+</style>
+<body>
+  <div class="row">
+  <div class="column" style="background-color: antiquewhite;">
+  <img src="https://www.hamiltonwatch.com/tenet-assets/images/poster-watch-red.png" style=" width: 400px;height:600px;">      
+    </div>
+    <div class="column">
+      <h1>Hamilton Watch</h1>
+      <p>The Hamilton Men's Watch is a perfect blend of style and functionality. With its automatic movement, sapphire crystal, chronograph function and water resistance up to 100m, 
+        this watch is an ideal choice for any man who wants to make a statement with his timepiece.<br>It is of 5 years old.</p>
+        
+        <H3>Rs 50000 </H3>
+        <p>Enter your Bid price :</p>
+
+        <input type="number" style="width: 200px;height: 30px;">
+        <!--button-->
+        <div class="button-wrapper">
+          <button class="confetti-button" style="width: 200px; height: 50px;background-color: #fbe204;border-radius:25%; margin: 50px;">Bid Now</button>
+        </div>   
+            
+    </div>
+  </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+    let canvas = document.createElement("canvas");
+    let container = document.getElementsByClassName("button-wrapper")[0];
+    canvas.width = 600;
+    canvas.height = 600;
+  
+    container.appendChild(canvas);
+  
+    let confetti_button = confetti.create(canvas);
+    confetti_button().then(() => container.removeChild(canvas));
+  });</script>
+
+</html>
