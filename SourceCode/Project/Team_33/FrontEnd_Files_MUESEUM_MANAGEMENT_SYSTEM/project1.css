@@ -1,0 +1,37 @@
+ body  {
+    height: 100%;
+    background-image: url("light.jpg");  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+a:visited{
+    color: darkmagenta;
+}
+a:hover{
+    background-color: red;
+    color: black;
+}
+a:active{
+    color: darkorange;
+    background-color: black;
+}
+hr{
+    border-top: 1px solid black;
+}
+#painting{
+    accent-color: red;
+}
+#crafts{
+    accent-color: red;
+}
+#CULTURAL{
+    accent-color: red;
+}
+.sub1{
+    background-color: lightseagreen;
+    color: white;
+
+}

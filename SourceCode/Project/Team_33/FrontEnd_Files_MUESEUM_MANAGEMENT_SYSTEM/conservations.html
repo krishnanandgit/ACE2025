@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conservation Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('AIC.jpg');
+    }
+    
+    header {
+        background-color: #9b1915;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+    }
+    h2{
+        color: yellow;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    main {
+        padding: 2em;
+    }
+    form{
+        color: aliceblue;
+        text-decoration: underline 1px solid black;
+    }
+    
+    #form-group {
+        margin-bottom: 1em;
+        color: white;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+    
+    input[type="text"], input[type="date"], textarea {
+        width: 15%;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+    
+    button {
+        padding: 0.7em 2em;
+        background-color: hsl(125, 90%, 48%);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    
+    footer {
+        background-color: hsl(258, 82%, 50%);
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+</style>
+<body>
+    <header>
+        <h1>Conservation Details</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exhibits.html">Exhibits</a></li>
+                <li><a href="visitors.html">Visitors</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="curators.html">Curators</a></li>
+                <li><a href="donations.html">Donations</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="memberships.html">Memberships</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="conservations.html">Conservations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Conservation Information</h2>
+            <form>
+                <div class="form-group">
+                    <label for="conservation_id">Conservation ID:</label>
+                    <input type="text" id="conservation_id" name="conservation_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="collection_id">Collection ID:</label>
+                    <input type="text" id="collection_id" name="collection_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="conservation_date">Conservation Date:</label>
+                    <input type="date" id="conservation_date" name="conservation_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="conservator_id">Conservator ID:</label>
+                    <input type="text" id="conservator_id" name="conservator_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="treatment_description">Treatment Description:</label>
+                    <textarea id="treatment_description" name="treatment_description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Museum Management System</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

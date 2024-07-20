@@ -1,0 +1,86 @@
+/* Reset default styles */
+body, h1, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background image */
+body {
+    background-image: url('Donation.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(245, 245, 245, 0.8);
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Donation form styles */
+.donation-form {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 20px;
+}
+
+.donation-form h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65100;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add more custom styles as needed */

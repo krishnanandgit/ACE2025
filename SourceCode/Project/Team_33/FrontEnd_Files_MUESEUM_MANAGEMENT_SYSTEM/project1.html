@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Management System</title>
+    <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+    <header><h1>WELCOME TO SAI SRINIVAS MUSEUM</h1>
+    <hr>
+    <p>A Museum Management System (MMS) is a software application designed to help museums manage their collections, operations, and interactions with visitors. These systems streamline various tasks and processes, ensuring efficient management and preservation of museum artifacts, as well as enhancing visitor experience. </p>
+    <p>Here's a detailed overview:</p>
+    <div>
+    <ul>
+        <li>Exhibit</li>
+        <li>Visitors</li>
+        <li>Ticket</li>
+        <li>Collections</li>
+        <li>Curator</li>
+        <li>Donation</li>
+        <li>Event</li>
+        <li>Membership</li>
+        <li>Guide</li>
+        <li>Coversation</li>
+    </ul>
+</div>
+</header>
+    <h3>For navigation to Required pages:</h3>
+    <h5>please select an option</h5>
+    <nav>
+        <ul>
+           <li> <a href="#Exhibit">Exhibit Details</a></li>
+            <li><a href="#Visitor">Visitor Details</a></li>
+            <li><a href="#Ticket">Ticket Deatils</a></li>
+            <li><a href="#Collection">Collection Details</a></li>
+            <li><a href="Curator">Curator Details</a></li>
+            <li><a href="#Donation">Donation Details</a></li>
+            <li><a href="#Event">Event Details</a></li>
+            <li><a href="#Membership">Membership Details</a></li>
+            <li><a href="Guide">Guide Details</a></li>
+            <li><a href="Coversation">Conversation</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <section id="Exhibit">
+        <h2>OUR'S MARVELLOUS COLLECTION</h2>
+        <ol>
+            <li>PAINTING</li>
+            <li>CRAFTS</li>
+            <li>CUITURAL ACTIVITIES</li>
+        </ol>
+        <p>SELECT OUR'S INTERESTED ACTIVITY</p>
+        <p><label for="painting">Painting</label>
+        <input type="radio" id="painting" name="name" value="painting">
+        <label for="crafts">Crafts</label>
+        <input type="radio" id="crafts" name="name" value="crafts">
+        <label for="CUITURAL">Cultural Activities</label>
+        <input type="radio" id="CUITURAL" name="name" value="Cultural Activities"></p>
+    </section>
+    <hr>
+    <section id="Visitor">
+        <h2>VISITORS OF THE DAY</h2>
+        <p>Please Enter your correct details to enjoy the Event:</p>
+        <form action="https://www.eventbrite.com/d/india--hyderabad/free--events/">
+            <fieldset>
+                <legend><h3>Customer personal details</h3></legend>
+                <p><label for="name">Enter your name</label>
+                    <input type="text" id="name" name="name1" placeholder="sai....." autocomplete="on" autofocus  required ></p>
+                <p><label for="phn">Phone number</label>
+                    <input type="tel" id="phn" name="phn1" placeholder="5612345789" autocomplete="on" autofocus required>
+                </p>
+                <p>
+                    <label for="email">Enter your mail_id</label>
+                    <input type="text" id="email" name="email1" placeholder="ping2sai@gmail.com" autocomplete="on" required autofocus>
+                </p>
+                <p>
+                    <label for="date">The event date</label>
+                    <input type="date" id="date" name="date1" required autofocus>
+                </p>
+                <p>
+                    <label for="pass">Enter the password</label>
+                    <input type="password" id="pass" name="pass1" required autofocus>
+                </p>
+                <p>
+                    <button id="button1" type="submit">submit</button>
+                </p>
+                </fieldset>
+                <fieldset>
+                    <legend><h3>INTERESTED FOOD ITEMS</h3></legend>
+                    <p>Enter the favorite</p>
+                    <p>
+                        <label for="biryani">favorite food</label>
+                        <select id="biryani" name="food" multiple>
+                        <option value="chicken biryani">chicken biryani</option>
+                        <option value="Fry piece biryani">Fry piece biryani</option>
+                        <option value="prawns biryani">prawns biryani</option>
+                        <option value="mutton biryani">mutton biryani</option>
+                        <option value="chicken dum biryani">chicken dum biryani</option>
+                        <option value="mutton boneless biryani">mutton boneless biryani</option>
+                        <option value="mutton dum biryani">mutton dum biryani</option>
+                        <option value="paneer biryani">paneer biryani</option>
+                        </select>
+                        <br><br>
+                        <button id="sub2" type="submit">submit</button>
+                    </p>
+                    </fieldset>
+        </form>
+    </section>
+    <hr>
+    <section id="Ticket">
+        <h2>SHOWS TICKETS</h2>
+        <fieldset>
+            <legend><h3>Ticket details of the customer</h3></legend>
+        <form action="https://in.bookmyshow.com/" target="_blank">
+            <p><label  for="name">Enter your name</label>
+            <input type="text" id="name" name="name" required autofocus></p>
+            <p><label for="email">Enter your mail</label>
+            <input type="email" id="email" name="email" required autofocus></p>
+            <p><label for="pass">Enter u r password</label>
+                <input type="password" id="pass" name="pass" required autofocus>
+            </p>
+            <br><br>
+            <button id="sub" type="submit">Submit</button>
+        </form>
+    </fieldset>
+    </section>
+    
+    
+</body>
+</html>
