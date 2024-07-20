@@ -1,0 +1,143 @@
+-Electric.java
+
+package package1;
+
+import java.util.Date;
+import java.util.*;
+
+public class Electric  {
+    private int transcation;
+    private String user;
+    private int payment ;
+    private int subscripion;
+    private int charging station;
+    private int vechile;
+
+    public Electric(int transcation, String user, int payment, int subscription, int chargingstation,int vechile) {
+        this.transcation = transcation;
+        this.user = user;
+        this.payment = payment;
+        this.subscription = subscription;
+        this.cargingstation = cargingstation;
+        this.vechile=vechile;
+    }
+
+    public int getTranscation() {
+        return transcation;
+    }
+
+    public void settranscation(int transcation) {
+        this.transcation = transcation;
+    }
+
+    public int getUser() {
+        return user ;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(int payment) {
+        this.payment = payment;
+    }
+
+    public int getSubscription() {
+        return subscription;
+    }
+
+    public void setSubscription(int subscription) {
+        this.subscription = subscription;
+    }
+
+    public Date getCharingstation() {
+        return Chargingstation;
+    }
+
+    public void setChargingstation(String chargingstation) {
+        this.charingstation = chargingstation;
+    }
+    public void getVechile(String vechile){
+        return vechile;
+    }
+    public void setVechile(String vechile) {
+        this.vechile = vechile;
+    }
+}
+
+-Transcation.java
+
+    private String name;
+    private List<Integer> genreIds;
+
+    public Transcation (int transctionid, String name) {
+        this.transctionid = transctionId;
+        this.name = name;
+        this.genreIds = new ArrayList<>();
+    }
+    public int getTranscationId() {
+        return transcation ;
+    }
+package package1;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Transcation  {
+    private int transcationid;
+
+    public void setTranscationId(int transcation ) {
+        this.transcationId = transcationId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Integer> getGenreIds() {
+        return genreIds;
+    }
+    public void addGenreId(int genreId) {
+        this.genreIds.add(genreId);
+    }
+}
+
+
+-User.java
+
+package package1;
+
+public class User {
+    private int userId;
+    private String name;
+
+    public User (int userId, String name) {
+        this.userId = userId;
+        this.name = name;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
