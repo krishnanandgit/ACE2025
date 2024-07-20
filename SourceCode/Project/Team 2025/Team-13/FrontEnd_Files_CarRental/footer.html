@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarRental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+  body{
+    height: 100vh;
+  }
+    #row1{
+        flex-direction: row;
+        max-width: 1200px;
+        display: flex;
+        padding: 10px 10px 10px 100px;
+
+    }
+    #row2{
+        flex-direction: row;
+        max-width: 1200px;
+        display: flex;
+        padding: 10px 10px 10px 100px;
+
+    }
+    .button-wrap{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        text-align: center;
+        letter-spacing: .5px;
+        text-transform: capitalize;
+        padding: 18px 50px;
+        font-size: 16px;
+        transition: all .3s;
+        display: inline-block;
+    }
+    #button{
+        margin-top: 200px;
+        width: 100%;
+        padding: 10px 50px 18px 100px;
+    }
+    a:hover{
+        background-color: black;
+        color: white;
+}
+.button-wrap:hover{
+    background-color: black;
+    color: white;
+    
+
+}
+ .footer{
+    color: white;
+    width: 100%;
+    padding:80px;
+    background-image: url('footer1.jpg');
+    background-size:contain;
+}
+
+
+</style>
+
+</head>
+<body>
+    <h6>WE RECOMMEND</h6>
+    <h1 class="heading">Latest Vehicles</h1><hr>
+    <div id="row1">
+        <div>
+            <figure>
+                <a href=""><img src="car1.png" height="150px" width="244px"></a>
+                <figcaption><h2>Jeep Compass</h2>price: 13,000/day</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <a href=""><img src="car2.png" height="150px" width="244px"></a>
+                <figcaption><h2>Kia EV6</h2>price: 9,000/day</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <a href=""><img src="car7.png" height="150px" width="244px"></a>
+                <figcaption><h2>Toyota Glanza</h2>price: 7,000/day</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <a href=""><img src="car4.png" height="150px" width="244px"></a>
+                <figcaption><h2>Kia Sonet</h2>price: 8,500/day</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div id="row2">
+        <div>
+            <figure>
+                <a href=""><img src="car5.png" height="150px" width="244px"></a>
+                <figcaption><h2>Hyudai i20</h2>price: 7,000/day</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <a href=""><img src="car6.png" height="150px" width="244px"></a>
+                <figcaption><h2>Tata Nexon</h2>price: 8,000/day</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <a href=""><img src="car3.png" height="150px" width="244px"></a>
+                <figcaption><h2>Mahindra XUV 3XO</h2>price: 7,000/day</figcaption>
+            </figure>
+        </div>
+        <div id="button">
+           <a href="allcars.html"><input class="button-wrap" type="button" value="Dicover More"></a>
+        </div> 
+    
+    </div>
+</body>
+<footer>
+   <div class="footer">
+    <div class="footer-inner">
+        <h2>Get A Fair Price For Your Car:</h2>
+        <h2>Sell To Us Today</h2>
+        <p>We are committed to providing our customers with exceptional service, competitive pricing, and a wide range of vehicles to choose from.</p>
+    </div>
+  </div>
+</footer>
+</html>

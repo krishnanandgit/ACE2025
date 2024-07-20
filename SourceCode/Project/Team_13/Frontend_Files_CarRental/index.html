@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental</title>
+  <link rel="icon" type="image/x-icon" href="web.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width : 100%;
+    overflow-x: hidden;
+  }
+  html {
+    font-family: 'rubik', sans-serif; 
+  }
+
+
+
+  nav {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    /*padding: 8px;*/
+    border-bottom: #fff 1px solid;
+    width: 100%;
+    position: absolute;  
+
+  }
+ /* nav {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    position: fixed;
+  }*/
+  .main-nav-list{
+    list-style:none;
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+    padding: 20px;
+    padding-left: 200px;
+    
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited{
+    text-decoration: none;
+    color:#fff;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  .main-nav-link:hover {
+    text-decoration: underline black 2px;
+
+  }
+  .nav-btns{
+    list-style: none;
+    display: flex;
+    gap: 2.0rem;
+    position: relative;
+    right:-200px;
+    top:29px;
+
+
+  }
+
+
+  header {
+    height: 100vh;
+    position: relative;
+    background-image:url("hyundaicopy.jpg");
+    background-size:cover;
+    filter: blur(6px);
+    -webkit-filter: blur(0.5px);
+     
+  }
+  
+  h1{
+    font-size: 48px;
+    margin:12px 0;
+    color: #fff;
+  }
+
+
+  
+  .header-container {
+
+    width: 1300px;
+    position: absolute;
+    left: 46%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .header-container-in{
+    width:40%;
+
+
+  }
+  /*.container{
+    margin: 0 auto;
+    width: 1300px;
+    
+  }*/
+
+  .btn-1:link,
+  .btn-1:visited {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 10px 20px ;
+  }
+  .btn-2:link,
+  .btn-2:visited {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 10px 20px ;
+  }
+  .btn-1:hover{
+    color:#fff;
+    background-color: #9A0F39;
+  }
+  .btn-2:hover{
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+
+  .btn-3 {
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #9A0F39;
+    text-decoration: none;   
+  }
+  .btn-3:hover {
+    color: black;
+    background-color: #fff;;
+    text-decoration: none;
+  } 
+  .nav-main-btn{
+    position: relative;
+    right: -250px;
+    
+  }
+
+  .nav-main-btn:link,
+  .nav-main-btn:visited{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 32px;
+    margin: 10px 20px ;
+  }
+  .nav-main-btn:hover{
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+    
+  }
+  .form{
+    width: 450px;
+    margin: 100px auto;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 120px;
+    right:170px;
+    border: 0.1px solid #fff;
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .05));
+
+
+
+  }
+  h2{
+    text-align: start;
+    font-size: 33px;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: white;
+  }
+  input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  #or{
+    color: #fff;
+  }
+  .top{
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 45px;
+  }
+  .logo {
+    text-decoration: none;
+  }
+
+
+
+
+
+</style>
+</head>
+<body>
+  <header> 
+    <nav class="container">
+      <div ><a href="index.html" class="logo"><h2 class="top">luxury<sub>CarRentals</sub></h2></a></div>
+       <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="index.html">Demo</a></li>
+        <li><a class="main-nav-link" href="cardetails.html">Deals</a></li>
+        <li><a class="main-nav-link" href="aboutus.html">About Us</a></li>
+        <li><a class="main-nav-link" href="allcars.html">shop</a></li>
+        <li><a class="main-nav-link" href="faq.html">FAQ</a></li>
+        <li><a class="main-nav-link" href="#">support</a></li>
+      </ul>
+      <ul class="nav-btns">
+        <li><svg
+          width="26"
+          height="26"
+          color="#fff"
+          viewBox="0 0 26 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+            fill="currentColor"
+          />
+        </svg></li>
+        <li><svg
+          width="26"
+          height="26"
+          color="#fff"
+          viewBox="0 0 26 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.79166 2H1V4H4.2184L6.9872 16.6776H7V17H20V16.7519L22.1932 7.09095L22.5308 6H6.6552L6.08485 3.38852L5.79166 2ZM19.9869 8H7.092L8.62081 15H18.3978L19.9869 8Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10 22C11.1046 22 12 21.1046 12 20C12 18.8954 11.1046 18 10 18C8.89543 18 8 18.8954 8 20C8 21.1046 8.89543 22 10 22Z"
+            fill="currentColor"
+          />
+          <path
+            d="M19 20C19 21.1046 18.1046 22 17 22C15.8954 22 15 21.1046 15 20C15 18.8954 15.8954 18 17 18C18.1046 18 19 18.8954 19 20Z"
+            fill="currentColor"/></svg></li>
+      </ul>
+      <a class="nav-main-btn" href="allcars.html">Explore Vehicles</a>
+    </nav>
+  </header> 
+  <main>
+    <div class="header-container">
+      <div class="header-container-in">
+      <h1 class="cover-tag">Where driving dreams have no limits</h1>
+      <a class="btn-1" href="#">Discover More</a>
+      <a class="btn-2" href="#">Meet Proxmia GT</a>
+    </div>
+  </div>
+    <div class="form">
+      <h2>Find Your Ride</h2>
+      <label for="name">NAME</label>
+      <br>
+      <input id="name" type="text" placeholder="Name">
+        <br>
+        <label for="email">EMAIL</label>
+        <br>
+        <input id="email" type="text" placeholder="Email">
+        <br>
+        <!--<center><h3 id="or">OR</h3></center>
+        <br>-->
+        <label for="mobile">MOBILE NUMBER</label>
+        <br>
+        <input id="mobile" type="text" name="Mobile number" placeholder="Mobile number">
+        <a href="cardetails.html"><button class="btn-3" type="submit" >Get Started</button></a>
+    </div>
+  </main>
+</body>
+</html>
