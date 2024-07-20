@@ -1,0 +1,144 @@
+Main.java
+
+package package1;
+
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+       
+        Subscription basicSubscription = new Subscription(1, "Basic", 9.99);
+        Subscription premiumSubscription = new Subscription(2, "Premium", 19.99);
+
+        User user1 = new User(1, "user1@example.com", "user1", "password1", basicSubscription.getSubscriptionId());
+        User user2 = new User(2, "user2@example.com", "user2", "password2", premiumSubscription.getSubscriptionId());
+
+        Payment payment1 = new Payment(1, "Payment One");
+        Payment payment2 = new payment(2, "Payment Two");
+
+        payment1.addGenreId(1);
+        Payment2.addGenreId(2);
+
+        Genre genre1 = new Payment(1, "Rock");
+        Genre genre2 = new Payment(2, "Pop");
+
+   
+        Vechile vechile1 = new Vechile(1, vechile1.getVechileId(), "Vechile One", payment1.getPaymentId(), new Date());
+        Vechile vechile2 = new Vechile(2, vechile2.getVechileId(), "Vechile Two", payment2.getPaymentId(), new Date());
+
+        Chargingstation chargingstation1 = new Chargingstation(1, "Chargingstation One", payment1.getPaymentId(), suscription1.getPaymentId(), 240, new Date());
+        Chargingstation chargingstation2 = new Chargingstation(2, "Chargingstation Two", payment2.getPaymentId(), subscription2.getPAymentId(), 180, new Date());
+        song2.addGenreId(genre2.getGenreId());
+
+        Transction transction1 = new Transction(1, user1.getUserId(), "Transction One");
+        transction1.addPaymentId(payment1.getPaymentId());
+        transction1.addPaymentId(payment2.getPaymentId());
+
+        Vechile vechile1 = new Vechile(1, user1.getUserId(), vechile1.getPaymentId(), new Date());
+        user1.addHistory(history1);
+        Vechile vechile = new Vechile(2, user2.getUserId(), vechile2.getPaymentId(), new Date());
+        user2.addVechile(vechile2);
+
+        
+        Payment payment1 = new Payment(1, 9.99, new Date(), user1.getUserId());
+        user1.addPayment(payment1);
+        Payment payment2 = new Payment(2, 19.99, new Date(), user2.getUserId());
+        user2.addPayment(payment2);
+
+        System.out.println("User 1 Subscription: " + basicSubscription.getName());
+        System.out.println("User 1 transaction: " + user1.gettranscation().size());
+        System.out.println("User 1 User: " + user1.getUser().size());
+        System.out.println("User 1 Payments: " + user1.getPayments().size());
+        System.out.println("Artist 1 Name: " + artist1.getName());
+        System.out.println("Artist 1 Vechile: " + artist1.getVecile().size());
+
+        
+            }
+}
+Subscription.java
+
+package package1;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Subscription {
+    private int SubscriptionId;
+    private int userId;
+    private String name;
+    private List<Integer> paymentIds;
+
+    public Subscription(int subscriptionId, int userId, String name) {
+        this.SubscriptionId = SubscriptionId;
+        this.userId = userId;
+        this.name = name;
+        this.paymentIds = new ArrayList<>();
+    }
+
+    public int getSubscriptionId() {
+        return subscriptionId;
+    }
+
+    public void setSubscriptionId(int playlistId) {
+        this.subscriptionId = subscriptionId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Integer> getpaymentIds() {
+        return paymentIds;
+    }
+
+    public void addpaymentId(int paymentId) {
+        this.paymentId.add(paymentId);
+    }
+}
+
+-Charging.java
+
+package package1;
+
+public class Charging {
+    private int userId;
+    private Strin  name;
+    
+
+    public Charging(int userId, String name) {
+        this.userId = userId;
+        this.name = name;
+        
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getName() {
+        return name;
+    }
+
+    public void setName(int name) {
+        this.name = name;
+    }
+
+    
+}
+
