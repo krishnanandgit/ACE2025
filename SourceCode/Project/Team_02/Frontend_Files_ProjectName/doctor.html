@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors - Hospital Management System</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #007bff; /* Blue color for heading */
+            margin-bottom: 10px;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .doctor {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .doctor img {
+            float: left;
+            margin-right: 15px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .doctor-info {
+            overflow: hidden;
+        }
+
+        .doctor-info h2 {
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .doctor-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .specialization {
+            font-style: italic;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #007bff; /* Blue color for footer */
+            color: #fff;
+            clear: both;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Doctors</h1>
+        <p>Meet our dedicated team of doctors.</p>
+    </header>
+    
+    <main>
+        <div class="doctor">
+            <img src="doctor1.jpg" alt="Doctor 1">
+            <div class="doctor-info">
+                <h2>Dr. John Doe</h2>
+                <p class="specialization">Cardiologist</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero in nisl convallis, et vehicula arcu sodales.</p>
+            </div>
+        </div>
+
+        <div class="doctor">
+            <img src="doctor2.jpg" alt="Doctor 2">
+            <div class="doctor-info">
+                <h2>Dr. Jane Smith</h2>
+                <p class="specialization">Pediatrician</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero in nisl convallis, et vehicula arcu sodales.</p>
+            </div>
+        </div>
+
+        <div class="doctor">
+            <img src="doctor3.jpg" alt="Doctor 3">
+            <div class="doctor-info">
+                <h2>Dr. Michael Brown</h2>
+                <p class="specialization">Orthopedic Surgeon</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero in nisl convallis, et vehicula arcu sodales.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
