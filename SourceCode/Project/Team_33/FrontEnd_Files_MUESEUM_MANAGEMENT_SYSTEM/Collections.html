@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('Collect.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 0; /* Reduced padding */
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em; /* Reduced font size */
+        }
+
+        main {
+            padding: 60px 20px 40px; /* Adjusted padding */
+        }
+
+        .entity, .add-collection {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .entity h2, .add-collection h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .entity p {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .collection-list h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .collection-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .collection-list li {
+            background: #e6e6e6;
+            border-radius: 5px;
+            margin: 5px 0;
+            padding: 10px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4A90E2;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0; /* Reduced padding */
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .mini-card {
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 150px;
+        }
+
+        .mini-card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Museum Management System</h1>
+    </header>
+    <main>
+        <section class="entity">
+            <h2>Collection</h2>
+            <p>Represents a group of related exhibits.</p>
+            <div class="image-container">
+                <img src="Crafts.jpg" alt="Crafts Collection" class="mini-card">
+                <img src="Paintings.jpg" alt="Paintings Collection" class="mini-card">
+                <img src="Sculptures.jpg" alt="Sculptures Collection" class="mini-card">
+            </div>
+            <div class="collection-list">
+                <h3>Current Collections</h3>
+                <ul>
+                    <li>Ancient Egypt</li>
+                    <li>Renaissance Art</li>
+                    <li>Modern Art</li>
+                    <li>Natural History</li>
+                </ul>
+            </div>
+        </section>
+        <section class="add-collection">
+            <h2>Add New Collection</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="collection-name">Collection Name:</label>
+                    <input type="text" id="collection-name" name="collection-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <button type="submit">Add Collection</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Museum Management System</p>
+    </footer>
+</body>
+</html>

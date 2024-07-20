@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body {
+        background-image: url('guide.jpg');
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #333;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    main {
+        padding: 2em;
+    }
+    
+    .form-group {
+        margin-bottom: 1em;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+    
+    input[type="text"], textarea {
+        width: 15%;
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+    
+    button {
+        padding: 0.7em 2em;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+</style>
+<body>
+    <header>
+        <h1>Guide Details</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exhibits.html">Exhibits</a></li>
+                <li><a href="visitors.html">Visitors</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="curators.html">Curators</a></li>
+                <li><a href="donations.html">Donations</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="memberships.html">Memberships</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="conservations.html">Conservations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Guide Information</h2>
+            <form>
+                <div class="form-group">
+                    <label for="guide_id">Guide ID:</label>
+                    <input type="text" id="guide_id" name="guide_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="expertise">Expertise:</label>
+                    <input type="text" id="expertise" name="expertise" required>
+                </div>
+                <div class="form-group">
+                    <label for="availability">Availability:</label>
+                    <input type="text" id="availability" name="availability" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Museum Management System</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

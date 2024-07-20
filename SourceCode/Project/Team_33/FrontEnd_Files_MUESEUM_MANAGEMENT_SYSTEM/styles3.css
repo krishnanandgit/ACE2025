@@ -1,0 +1,32 @@
+/* ... (existing styles) ... */
+
+
+
+/* Style individual event listings */
+.events ul li {
+    list-style: none;
+    background: rgba(249, 249, 249, 0.9); /* Semi-transparent background to improve readability */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* Hover effect for event listings */
+.events ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the "View Details" button */
+.events ul li button {
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* ... (other styles as needed) ... */

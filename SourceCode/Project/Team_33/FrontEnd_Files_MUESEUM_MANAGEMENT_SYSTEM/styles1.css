@@ -1,0 +1,95 @@
+/* Reset default styles */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the background image covers the entire page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('Curator.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text visibility */
+    width: 100%;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-family: 'Sriracha', cursive;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #fff;
+    padding: 35px 20px;
+}
+
+.intro {
+    flex: 1; /* Makes the intro section take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the start (left) */
+    justify-content: center;
+    text-align: left; /* Align text to the left */
+    padding-left: 50px; /* Adjust padding as needed to position over the man */
+    color: #fff;
+}
+
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65100;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.copy {
+    font-size: 14px;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.links {
+    margin-right: 20px;
+}
+
+.links span {
+    font-weight: bold;
+}
+
+.links a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
