@@ -1,0 +1,145 @@
+CREATE TABLE Payment (
+    id INT PRIMARY KEY,
+    cardnumber INT,
+    amount VARCHAR(255)
+);
+
+CREATE TABLE Delivery (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    date VARCHAR(255),
+    address VARCHAR(255),
+    payment_id INT,
+    FOREIGN KEY (payment_id) REFERENCES Payment(id)
+);
+
+CREATE TABLE Items (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    price VARCHAR(255)
+);
+
+CREATE TABLE Customer (
+    id INT PRIMARY KEY,
+    address VARCHAR(255),
+    payment INT,
+    FOREIGN KEY (payment) REFERENCES Payment(id)
+);
+
+CREATE TABLE OrderTable (  -- 'Order' is a reserved word in SQL
+    id INT PRIMARY KEY,
+    details INT,
+    ordertype VARCHAR(255),
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES Customer(id)
+);
+
+CREATE TABLE Seller (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    age INT,
+    contactnum VARCHAR(255),
+    username VARCHAR(255),
+    password VARCHAR(255)
+);
+
+CREATE TABLE Product (
+    id INT PRIMARY KEY,
+    details VARCHAR(255),
+    list VARCHAR(255),
+    seller_id INT,
+    FOREIGN KEY (seller_id) REFERENCES Seller(id)
+);
+-- Inserting into Payment
+INSERT INTO Payment (id, cardnumber, amount) VALUES (1, 1234567890123456, '100.00')
+(2, 2345678901234567, '200.00'),
+(3, 3456789012345678, '300.00'),
+(4, 4567890123456789, '400.00'),
+(5, 5678901234567890, '500.00'),
+(6, 6789012345678901, '600.00'),
+(7, 7890123456789012, '700.00'),
+(8, 8901234567890123, '800.00'),
+(9, 9012345678901234, '900.00'),
+(10, 1012345678901234, '1000.00');
+
+-- Inserting into Delivery
+INSERT INTO Delivery (id, name, date, address, payment_id) VALUES (1, 'Delivery1', '2024-05-24', 'Address1', 1)
+(2, 'ramu', '2024-05-25', 'hanumakonda', 2),
+(3, 'somu', '2024-05-26', 'warangal', 3),
+(4, 'raju', '2024-05-27', 'sircilla', 4),
+(5, 'ammu', '2024-05-28', 'mustabad', 5),
+(6, 'dinesh', '2024-05-29', 'siddepet', 6),
+(7, 'ravi', '2024-05-30', 'pullur', 7),
+(8, 'pallavi', '2024-05-31', 'cheekode', 8),
+(9, 'ramya', '2024-06-01', 'pothugal', 9),
+(10, 'reddy', '2024-06-02', 'kamareddy', 10);
+
+-- Inserting into Items
+INSERT INTO Items (id, name, price) VALUES (1, 'Item1', '10.00')
+(2, 'Item2', '20.00'),
+(3, 'Item3', '30.00'),
+(4, 'Item4', '40.00'),
+(5, 'Item5', '50.00'),
+(6, 'Item6', '60.00'),
+(7, 'Item7', '70.00'),
+(8, 'Item8', '80.00'),
+(9, 'Item9', '90.00'),
+(10, 'Item10', '100.00');
+
+-- Inserting into Customer
+INSERT INTO Customer (id, address, payment) VALUES (1, 'CustomerAddress1', 1)
+(2, 'CustomerAddress2', 2),
+(3, 'CustomerAddress3', 3),
+(4, 'CustomerAddress4', 4),
+(5, 'CustomerAddress5', 5),
+(6, 'CustomerAddress6', 6),
+(7, 'CustomerAddress7', 7),
+(8, 'CustomerAddress8', 8),
+(9, 'CustomerAddress9', 9),
+(10, 'CustomerAddress10', 10);
+
+-- Inserting into OrderTable
+INSERT INTO OrderTable (id, details, ordertype, customer_id) VALUES (1, 101, 'Type1', 1)
+(2, 102, 'Type2', 2),
+(3, 103, 'Type3', 3),
+(4, 104, 'Type4', 4),
+(5, 105, 'Type5', 5),
+(6, 106, 'Type6', 6),
+(7, 107, 'Type7', 7),
+(8, 108, 'Type8', 8),
+(9, 109, 'Type9', 9),
+(10, 110, 'Type10', 10);
+
+-- Inserting into Seller
+INSERT INTO Seller (id, name, age, contactnum, username, password) VALUES (1, 'Seller1', 30, '1234567890', 'seller1', 'pass1')
+(2, 'Seller2', 31, '2345678901', 'seller2', 'pass2'),
+(3, 'Seller3', 32, '3456789012', 'seller3', 'pass3'),
+(4, 'Seller4', 33, '4567890123', 'seller4', 'pass4'),
+(5, 'Seller5', 34, '5678901234', 'seller5', 'pass5'),
+(6, 'Seller6', 35, '6789012345', 'seller6', 'pass6'),
+(7, 'Seller7', 36, '7890123456', 'seller7', 'pass7'),
+(8, 'Seller8', 37, '8901234567', 'seller8', 'pass8'),
+(9, 'Seller9', 38, '9012345678', 'seller9', 'pass9'),
+(10, 'Seller10', 39, '0123456789', 'seller10', 'pass10');
+
+-- Inserting into Product
+INSERT INTO Product (id, details, list, seller_id) VALUES (1, 'Details1', 'List1', 1)
+(2, 'Details2', 'List2', 2),
+(3, 'Details3', 'List3', 3),
+(4, 'Details4', 'List4', 4),
+(5, 'Details5', 'List5', 5),
+(6, 'Details6', 'List6', 6),
+(7, 'Details7', 'List7', 7),
+(8, 'Details8', 'List8', 8),
+(9, 'Details9', 'List9', 9),
+(10, 'Details10', 'List10', 10);
+
+
+
+select * from payment;
+select * from delivery;
+select * from items;
+select * from customer;
+select * from ordertable;
+select * from seller;
+select * from product;
