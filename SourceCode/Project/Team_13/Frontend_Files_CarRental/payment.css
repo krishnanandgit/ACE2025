@@ -1,0 +1,89 @@
+#car{
+  
+        background-image:linear-gradient(to right, white,black);
+        height:100vh;
+        width:100vw;
+        background-size:cover;
+      
+        padding:300px;
+        position:static;
+        
+}
+.heading{
+    color:grey;
+    font-family:"Roboto";
+    font-size:150px;
+    padding:10px;
+}
+input {
+    color:gray;
+    font-family:"Roboto";
+    font-size:90px;
+    background-color:#ffffff;
+    width:1500px;
+    margin-left: 3px;
+    padding:20px;
+    
+}
+.button1 {
+    font-family:"Roboto";
+    color:#ffffff;
+    font-size:100px;
+    height:150px;
+    width:700px;
+    background-color:#9A0F39;
+    
+    border-color:#9A0F39;
+    border-radius:14px;
+    border-style:solid;
+    padding-left:20px;
+    padding-right:5px;
+    text-align:center;
+    margin-right: 100px;
+}
+header{
+    border: 1px solid black;
+   
+    height: 75%;
+    width: 3000px;
+    margin-left:25%;
+    padding:10px;
+    background-color: #ffffff;
+    border-color:#ffffff;
+    background-size:cover;
+    position:fixed;
+    text-align: center;
+    
+    
+   
+}
+.button-container {
+    padding:55px;
+    margin-top:50px;
+    
+   
+}
+.button1:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+.container {
+    margin-top:10px;
+}
+.heading1{
+    color:grey;
+    font-family:"Roboto";
+    font-size:100px;
+    padding:10px;
+    text-align: center;
+}
+.heading2{
+    color:grey;
+    font-family:"Roboto";
+    font-size:100px;
+    padding:10px;
+    text-align: center;
+}

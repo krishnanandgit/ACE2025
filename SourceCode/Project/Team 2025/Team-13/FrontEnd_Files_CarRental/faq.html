@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .main-head{
+    width:100%;
+    height:50vh;
+    background-color: #000;
+  }
+  .main-h1{
+    font-size: 50px;
+    color: #fff;
+    padding-top: 200px;
+  }
+  .main-body{
+    width: 100%;
+    height: 98vh;
+  }
+  .body-h1{
+    color: #000;
+    font-size: 60px;
+    padding-top: 20px;
+  }
+  h4{
+    margin-top: 40px;
+  }
+  .accordion{
+    width: 800px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+  }
+
+  .item {
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 24px;
+    row-gap: 32px;
+    align-items: center;
+
+  }
+
+  .no,
+  .text{
+    font-size: 30px;
+    font-weight: 700;
+    /*color: #9A0F39;*/
+
+  }
+
+  .icon{
+    width: 24px;
+    height: 24px;
+    stroke: #000;
+
+  }
+  .hidden{
+    grid-column: 1;
+    
+
+
+  }
+  .hidden p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  /* open state*/
+  .open .no, 
+  .open .text{
+    color: #9A0F39;
+  }
+  .open .hidden {
+    display: block;
+  }
+  .border {
+    border: rgb(24, 24, 25) 1px solid;
+    padding: 10px;
+    padding-left: 25px;;
+    
+  }
+
+</style>
+</head>
+<body>
+  <div class="main-head">
+    <center> <h1 class="main-h1">Frequently Asked Question's</h1></center>
+  </div> 
+  <div class="main-body">
+    <center>
+      <h4>FAQ'S</h4>
+      <h1 class="body-h1">The Most Common <br>Question's</h1></center>
+    
+    <div class="accordion">
+      <div class="border">
+      <div class="item ">
+      <p class="text">What types of Vehicles do you rent?</p>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+      
+      <div class="hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quibusdam perspiciatis at tenetur non velit consectetur architecto nisi obcaecati culpa, placeat inventore repellendus al</p>
+      </div>   
+    </div>
+   </div>
+   <div class="border">
+    <div class="item">
+    <p class="text">Is a car rental deposit required?</p>
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+    </svg>
+    
+    <div class="hidden">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quibusdam perspiciatis at tenetur non velit consectetur architecto nisi obcaecati culpa, placeat inventore repellendus al</p>
+    </div>  
+  </div>
+  </div>
+
+
+  <div class="border">
+  <div class="item">
+  <p class="text">How do I rent a car?</p>
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+  </svg>
+  
+  <div class="hidden">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quibusdam perspiciatis at tenetur non velit consectetur architecto nisi obcaecati culpa, placeat inventore repellendus al</p>
+  </div> 
+</div>
+</div>
+  <div class="border">
+  <div class="item">
+  <p class="text">What should I do if my rental car breaks down?</p>
+  <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+  </svg>
+  
+  <div class="hidden">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quibusdam perspiciatis at tenetur non velit consectetur architecto nisi obcaecati culpa, placeat inventore repellendus al</p>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+
+
+  </div>
+</body>
+</html>
