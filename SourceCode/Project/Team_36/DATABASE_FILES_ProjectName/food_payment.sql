@@ -1,4 +1,4 @@
-
+use mysql;
 DROP TABLE IF EXISTS payment;
 
 CREATE TABLE payment(

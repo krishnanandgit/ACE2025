@@ -1,4 +1,4 @@
-
+use mysql;
 
 CREATE TABLE promotion (
   PromotionID int NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE promotion (
   StartDate date DEFAULT NULL,
   EndDate date DEFAULT NULL,
   PRIMARY KEY (PromotionID),
- FOREIGN KEY (RestaurantID) REFERENCES restaurant (RestaurantID)
+  FOREIGN KEY (RestaurantID) REFERENCES restaurant (RestaurantID)
 ) ;
 INSERT INTO promotion VALUES (1,1,'Buy One Get One Free','Buy one burger, get one free!','2024-05-01','2024-05-31');
 INSERT INTO promotion VALUES(2,2,'10% Off All Orders','Get 10% off all orders over $20!','2024-05-05','2024-06-05');

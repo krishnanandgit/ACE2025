@@ -1,14 +1,14 @@
-
-DROP TABLE IF EXISTS order;
-CREATE TABLE order (
+use mysql;
+drop table if exists order;
+CREATE TABLE order(
   OrderID int NOT NULL,
-  CustomerID int DEFAULT NULL,
-  RestaurantID int DEFAULT NULL,
-  OrderDate date DEFAULT NULL,
-  TotalAmount decimal(10,2) DEFAULT NULL,
+  CustomerID int,
+  RestaurantID int,
+  OrderDate date,
+  TotalAmount decimal(10,2),
   PRIMARY KEY (OrderID),
-  FOREIGN KEY (CustomerID) REFERENCES customer (CustomerID),
-  FOREIGN KEY (RestaurantID) REFERENCES restaurant (RestaurantID)
+  FOREIGN KEY(CustomerID) REFERENCES customer(CustomerID),
+  FOREIGN KEY(RestaurantID) REFERENCES restaurant(RestaurantID)
 ); 
 
 INSERT INTO order VALUES (1,1,1,'2024-05-01',20.00);

@@ -5,7 +5,7 @@ CREATE TABLE menu (
   ItemName varchar(50),
   Price decimal(10,2),
   PRIMARY KEY (MenuID),
-  FOREIGN KEY RestaurantID REFERENCES restarant(RestaurantID),
+  FOREIGN KEY RestaurantID REFERENCES restaurant(RestaurantID),
 ) ;
 INSERT INTO menu VALUES (1,1,'Burger',5.00);
 INSERT INTO menu VALUES(2,1,'Fries',3.00);
