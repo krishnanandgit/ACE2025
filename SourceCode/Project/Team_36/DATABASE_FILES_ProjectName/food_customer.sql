@@ -9,7 +9,7 @@ CREATE TABLE customer (
   City varchar(50),
   State varchar(50) ,
   ZipCode varchar(10)
-) ;
+);
 INSERT INTO customer VALUES (1,'John','Doe','johndoe@example.com','123-456-7890','123 Main St','New York','NY','10001');
 INSERT INTO customer VALUES(2,'Jane','Smith','janesmith@example.com','987-654-3210','456 Elm St','Los Angeles','CA','90001');
 INSERT INTO customer VALUES(3,'Bob','Johnson','bobjohnson@example.com','555-123-4567','789 Oak St','Chicago','IL','60601');
