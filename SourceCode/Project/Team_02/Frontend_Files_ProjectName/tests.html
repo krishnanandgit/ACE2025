@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests - Hospital Management System</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #007bff; /* Blue color for heading */
+            margin-bottom: 10px;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .test {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .test img {
+            float: left;
+            margin-right: 15px;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .test-info {
+            overflow: hidden;
+        }
+
+        .test-info h2 {
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .test-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .category {
+            font-style: italic;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .filter-container {
+            margin-bottom: 20px;
+        }
+
+        .filter-container label {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .filter-input {
+            padding: 8px;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #007bff; /* Blue color for footer */
+            color: #fff;
+            clear: both;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Medical Tests</h1>
+        <p>Explore different medical tests offered by our hospital.</p>
+    </header>
+    
+    <main>
+        <div class="filter-container">
+            <label for="test-search">Search:</label>
+            <input type="text" id="test-search" class="filter-input" oninput="filterTests()" placeholder="Search tests...">
+        </div>
+
+        <div id="test-list">
+            <!-- Test items will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample data for tests (replace with actual data)
+        const tests = [
+            { name: 'Blood Test', category: 'Lab Tests', description: 'Checks blood count and health.', image: 'blood-test.jpg' },
+            { name: 'MRI Scan', category: 'Imaging', description: 'Uses magnetic resonance imaging technology.', image: 'mri-scan.jpg' },
+            { name: 'X-ray', category: 'Imaging', description: 'Uses electromagnetic radiation to visualize internal structures.', image: 'x-ray.jpg' },
+            { name: 'Ultrasound', category: 'Imaging', description: 'Uses high-frequency sound waves to create images of organs and structures.', image: 'ultrasound.jpg' },
+            { name: 'ECG', category: 'Cardiology', description: 'Records the electrical activity of the heart.', image: 'ecg.jpg' },
+            // Add more test data as needed
+        ];
+
+        // Function to display tests
+        function displayTests() {
+            const testList = document.getElementById('test-list');
+            testList.innerHTML = '';
+
+            tests.forEach(test => {
+                const testItem = `
+                    <div class="test">
+                        <img src="${test.image}" alt="${test.name}">
+                        <div class="test-info">
+                            <h2>${test.name}</h2>
+                            <p class="category">${test.category}</p>
+                            <p>${test.description}</p>
+                        </div>
+                    </div>
+                `;
+                testList.innerHTML += testItem;
+            });
+        }
+
+        // Function to filter tests based on search input
+        function filterTests() {
+            const searchText = document.getElementById('test-search').value.toLowerCase();
+            const filteredTests = tests.filter(test => test.name.toLowerCase().includes(searchText) || test.category.toLowerCase().includes(searchText));
+            const testList = document.getElementById('test-list');
+            testList.innerHTML = '';
+
+            filteredTests.forEach(test => {
+                const testItem = `
+                    <div class="test">
+                        <img src="${test.image}" alt="${test.name}">
+                        <div class="test-info">
+                            <h2>${test.name}</h2>
+                            <p class="category">${test.category}</p>
+                            <p>${test.description}</p>
+                        </div>
+                    </div>
+                `;
+                testList.innerHTML += testItem;
+            });
+        }
+
+        // Initial display of tests
+        displayTests();
+    </script>
+</body>
+</html>

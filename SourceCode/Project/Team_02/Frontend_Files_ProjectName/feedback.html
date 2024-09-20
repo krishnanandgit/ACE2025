@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        .header p {
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .content {
+            margin-bottom: 20px;
+        }
+
+        .content label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .content input, .content textarea, .content select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .footer button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .footer button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Feedback</h1>
+            <p>Hospital Management System</p>
+        </div>
+        <div class="content">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="1">1 - Very Poor</option>
+                <option value="2">2 - Poor</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5"></textarea>
+        </div>
+        <div class="footer">
+            <button type="button">Submit Feedback</button>
+        </div>
+    </div>
+</body>
+</html>
