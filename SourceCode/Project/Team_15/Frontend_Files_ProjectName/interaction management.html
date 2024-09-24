@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction Management</title>
+    <link rel="stylesheet" href="styles6.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Basic styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        input, select, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Interaction Management</h1>
+</header>
+
+<div class="container">
+    <!-- Interaction Log Section -->
+    <section id="interaction-log">
+        <h2>Interaction Log</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interaction ID</th>
+                    <th>Date</th>
+                    <th>Customer Name</th>
+                    <th>Interaction Type</th>
+                    <th>Notes</th>
+                    <th>Action</th>
+                </table>
+            </thead>
+        </tr>
+    </section>
+
+    <!-- Add New Interaction Section -->
+    <section id="new-interaction">
+        <h2>Add New Interaction</h2>
+        <form action="add_interaction.php" method="post">
+            <label for="customer-name">Customer Name</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+
+            <label for="interaction-date">Date</label>
+            <input type="date" id="interaction-date" name="interaction-date" required>
+
+            <label for="interaction-type">Interaction Type</label>
+            <select id="interaction-type" name="interaction-type" required>
+                <option value="Phone Call">Phone Call</option>
+                <option value="Email">Email</option>
+                <option value="Meeting">Meeting</option>
+                <option value="Chat">Chat</option>
+                <!-- Add more interaction types as needed -->
+            </select>
+
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" rows="4" required></textarea>
+
+            <button type="submit">Add Interaction</button>
+        </form>
+    </section>
+
+    <!-- Customer Interaction Summary Section -->
+    <section id="interaction-summary">
+        <h2>Customer Interaction Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Total Interactions</th>
+                    <th>Last Interaction Date</th>
+                    <th>Last Interaction Type</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+</div>
+
+</body>
+</html>
