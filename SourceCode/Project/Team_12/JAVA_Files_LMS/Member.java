@@ -1,4 +1,4 @@
-package com.librarymanagement.model;
+package package1;
 
 public class Member {
     private int memberID;

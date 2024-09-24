@@ -1,0 +1,23 @@
+nav ul li {
+    display:inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: white solid underline;
+    font-size:1.2em;
+}
+
+section {
+    padding:5em;
+    text-align:center;
+    margin:2em auto;
+    max-width: 800px;
+    background-color: rgb(229, 226, 222);
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #dd0505;
+}
