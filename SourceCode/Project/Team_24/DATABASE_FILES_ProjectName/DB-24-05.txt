@@ -1,0 +1,136 @@
+Enter password: **********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use sakila;
+Database changed
+mysql> select * from student;
++--------+------------+--------+
+| name   | rollnumber | branch |
++--------+------------+--------+
+| Sindhu |        123 | CSM    |
+| Srija  |        257 | ECE    |
+| Kamala |        271 | EEE    |
+| Laxman |        178 | CIVIL  |
+| gopi   |       2638 | CSE    |
+| uma    |        276 | ECE    |
++--------+------------+--------+
+6 rows in set (0.00 sec)
+
+mysql> use sys;
+Database changed
+mysql> select * from weatherDatas;
++----+----------+------------+-------------+----------+---------------+------------+----------------+
+| id | location | date       | temperature | humidity | precipitation | wind_speed | wind_direction |
++----+----------+------------+-------------+----------+---------------+------------+----------------+
+|  1 | khammam  | 2024-05-23 |       20.50 |    60.20 |          0.00 |      15.00 | NE             |
+|  2 | madhira  | 2024-05-23 |       25.30 |    55.50 |          0.00 |      10.20 | SW             |
+|  3 | Bonakal  | 2024-05-23 |       18.70 |    70.10 |          0.20 |      12.50 | NW             |
+|  4 | khammam  | 2024-05-23 |       20.50 |    60.20 |          0.00 |      15.00 | NE             |
+|  5 | madhira  | 2024-05-23 |       25.30 |    55.50 |          0.00 |      10.20 | SW             |
+|  6 | Bonakal  | 2024-05-23 |       18.70 |    70.10 |          0.20 |      12.50 | NW             |
+|  7 | khammam  | 2024-05-23 |       20.50 |    60.20 |          0.00 |      15.00 | NE             |
+|  8 | madhira  | 2024-05-23 |       25.30 |    55.50 |          0.00 |      10.20 | SW             |
+|  9 | Bonakal  | 2024-05-23 |       18.70 |    70.10 |          0.20 |      12.50 | NW             |
++----+----------+------------+-------------+----------+---------------+------------+----------------+
+9 rows in set (0.00 sec)
+
+mysql> use world;
+Database changed
+mysql> select * from users;
++---------+-----------+---------------------+-----------------+
+| user_id | username  | email               | date_registered |
++---------+-----------+---------------------+-----------------+
+|       1 | Laxmana   | Laxmana@gmail.com   | 2024-05-24      |
+|       2 | Sindhuu   | Sindhuu@gmail.com   | 2024-05-26      |
+|       3 | Srija     | Srija@gmail.com     | 2024-05-27      |
+|       4 | kamala    | kamala@gmail.com    | 2024-05-22      |
+|       5 | Gopi      | Gopi@gmail.com      | 2024-05-20      |
+|       6 | Uma       | Uma@gmail.com       | 2024-05-25      |
+|       7 | kamalakar | kamalakar@gmail.com | 2024-05-25      |
+|       8 | Mani      | Mani@gmail.com      | 2024-05-21      |
+|       9 | Ammu      | Ammu@gmail.com      | 2024-05-22      |
+|      10 | Sunny     | Sunny@gmail.com     | 2024-05-20      |
+|      11 | Ravi      | Ravi@gmail.com      | 2024-05-25      |
+|      12 | keerthi   | keerthi@gmail.com   | 2024-05-22      |
+|      13 | Akanksha  | Akanksha@gmail.com  | 2024-05-20      |
+|      14 | srujana   | srujana@gmail.com   | 2024-05-21      |
+|      15 | Ram       | Ram@gmail.com       | 2024-05-22      |
+|      16 | sujatha   | sujatha@gmail.com   | 2024-05-20      |
+|      17 | raaji     | raaji@gmail.com     | 2024-05-22      |
++---------+-----------+---------------------+-----------------+
+17 rows in set (0.00 sec)
+
+mysql> use wfa;
+Database changed
+mysql> select * from forecast;
++-------------+------------+-------+---------------+
+| forecast_id | date       | value | forecasted_by |
++-------------+------------+-------+---------------+
+|           1 | 2024-05-24 |  10.5 | Sunny         |
+|           2 | 2024-05-25 |  11.2 | Ammu          |
+|           3 | 2024-05-25 |  12.5 | Srija         |
+|           4 | 2024-05-25 |  10.5 | sindhu        |
+|           5 | 2024-05-25 |  13.3 | Renuka        |
+|           6 | 2024-05-25 |  11.2 | charan        |
+|           7 | 2024-05-25 |  13.7 | Aswani        |
+|           8 | 2024-05-25 |    11 | Sai           |
+|           9 | 2024-05-25 |  15.2 | Sujatha       |
+|          10 | 2024-05-25 |  11.9 | Kamala        |
+|          11 | 2024-05-25 |  18.2 | Pravasthi     |
+|          12 | 2024-05-25 |  11.7 | Avanthika     |
+|          13 | 2024-05-25 |  11.2 | uma           |
+|          14 | 2024-05-25 |  16.2 | ravi          |
+|          15 | 2024-05-25 |  11.8 | Rukmini       |
+|          16 | 2024-05-25 |  15.2 | kamalakar     |
++-------------+------------+-------+---------------+
+16 rows in set (0.00 sec)
+
+mysql> use sys;
+Database changed
+mysql> select * from locations;
++-------------+-------------+---------+-----------+-----------+---------+
+| location_id | name        | address | city      | state     | country |
++-------------+-------------+---------+-----------+-----------+---------+
+|           1 | khammam     | 123     | Anytown   | telangana | india   |
+|           2 | Madhira     | 456     | Othertown | Andhra    | America |
+|           3 | Mamunur     | 129     | Anytown   | telangana | india   |
+|           4 | kristapuram | 146     | Anytown   | telangana | America |
+|           5 | vvpalem     | 134     | Anytown   | telangana | india   |
++-------------+-------------+---------+-----------+-----------+---------+
+5 rows in set (0.00 sec)
+
+mysql> use world;
+Database changed
+mysql> select * from historical_data;
++---------+------------+-------+----------------+
+| data_id | date       | value | description    |
++---------+------------+-------+----------------+
+|       1 | 2024-05-24 |  10.5 | Description 1  |
+|       2 | 2024-05-25 |  15.2 | Description 2  |
+|       3 | 2024-05-25 |    17 | Description 3  |
+|       4 | 2024-05-25 |  11.3 | Description 4  |
+|       5 | 2024-05-25 |  10.2 | Description 5  |
+|       6 | 2024-05-25 |  12.2 | Description 6  |
+|       7 | 2024-05-25 |  19.2 | Description 8  |
+|       8 | 2024-05-25 |  12.2 | Description 9  |
+|       9 | 2024-05-25 |  11.8 | Description 7  |
+|      10 | 2024-05-25 |  18.2 | Description 10 |
+|      11 | 2024-05-25 |  11.5 | Description 11 |
+|      12 | 2024-05-25 |  14.3 | Description 12 |
+|      13 | 2024-05-25 |  11.2 | Description 13 |
+|      14 | 2024-05-25 |    10 | Description 14 |
+|      15 | 2024-05-25 |  11.2 | Description 15 |
++---------+------------+-------+----------------+
+15 rows in set (0.00 sec)
+
+mysql>
