@@ -1,0 +1,10 @@
+create table payment(payment_id int primary key,amount int not null,payment_date datetime not null,bidder_id int REFERENCES bidder(bidder_id),auction_id int REFERENCES auction(auction_id),auctioneer_id int REFERENCES auctioneer(auctioneer_id));
+create table shipping(shipping_id int primary key,auction_id int REFERENCES auction(auction_id),bidder_id int REFERENCES bidder(bidder_id),shipping_status tinyint,shipping_address varchar(255)not null);
+create table category(category_id int primary key,category_name varchar(255));
+create table review(review_id int primary key,auction_id int references auction(auction_id),bidder_id int references bidder(bidder_id),comment varchar(255),rating int not null);
+create table commission(commission_id int primary key,auction_id int references auction(auction_id),commission_amount int not null);
+create table notification(notification_id int primary key,message varchar(255),notification_type varchar(255) not null,payment_id int references payment(payment_id));
+create table auction(auction_id int primary key,start_time time not null,end_time time not null,status tinyint,reserve_price int not null);
+create table bidder(bidder_id int primary key,username varchar(255),email varchar(255) not null,password varchar(255) not null);
+create table item(item_id int primary key,starting_price int not null,description varchar(255),Title varchar(255) not null);
+create table auctioneer(auctioneer_id int primary key,name varchar(255),contact_info int unique);

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Auction Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8b20df;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #dfdf20;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form div {
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #8b20df;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #825ea1;
+        }
+        button {
+            padding: 8px 12px;
+            margin-right: 5px;
+            background-color: #8b20df;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #825ea1;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Auction Platform</h1>
+    </header>
+    <div class="container">
+        <h2>Add/Edit Auction Item</h2>
+        <form id="auctionForm" onsubmit="return handleFormSubmit(event)">
+            <input type="hidden" id="itemId" value="">
+            <div>
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" required>
+            </div>
+            <div>
+                <label for="itemDescription">Description:</label>
+                <input type="text" id="itemDescription" required>
+            </div>
+            <div>
+                <label for="startingBid">Starting Bid:</label>
+                <input type="number" id="startingBid" required>
+            </div>
+            <div>
+                <input type="submit" value="Save Item">
+            </div>
+        </form>
+
+        <h2>Auction Items</h2>
+        <table id="auctionItemsTable">
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Description</th>
+                    <th>Starting Bid</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Auction items will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let auctionItems = [];
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const itemId = document.getElementById('itemId').value;
+            const itemName = document.getElementById('itemName').value;
+            const itemDescription = document.getElementById('itemDescription').value;
+            const startingBid = document.getElementById('startingBid').value;
+
+            if (itemId) {
+                updateItem(itemId, itemName, itemDescription, startingBid);
+            } else {
+                addItem(itemName, itemDescription, startingBid);
+            }
+            clearForm();
+            renderTable();
+        }
+
+        function addItem(name, description, bid) {
+            const newItem = {
+                id: Date.now().toString(),
+                name,
+                description,
+                bid
+            };
+            auctionItems.push(newItem);
+        }
+
+        function updateItem(id, name, description, bid) {
+            const item = auctionItems.find(item => item.id === id);
+            item.name = name;
+            item.description = description;
+            item.bid = bid;
+        }
+
+        function deleteItem(id) {
+            auctionItems = auctionItems.filter(item => item.id !== id);
+            renderTable();
+        }
+
+        function editItem(id) {
+            const item = auctionItems.find(item => item.id === id);
+            document.getElementById('itemId').value = item.id;
+            document.getElementById('itemName').value = item.name;
+            document.getElementById('itemDescription').value = item.description;
+            document.getElementById('startingBid').value = item.bid;
+        }
+
+        function viewItem(id) {
+            const item = auctionItems.find(item => item.id === id);
+            alert(`Item Details:\n\nID: ${item.id}\nName: ${item.name}\nDescription: ${item.description}\nStarting Bid: $${item.bid}`);
+        }
+
+        function clearForm() {
+            document.getElementById('itemId').value = '';
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemDescription').value = '';
+            document.getElementById('startingBid').value = '';
+        }
+
+        function renderTable() {
+            const tableBody = document.getElementById('auctionItemsTable').querySelector('tbody');
+            tableBody.innerHTML = '';
+            auctionItems.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.description}</td>
+                    <td>${item.bid}</td>
+                    <td class="button-container">
+                        <button onclick="viewItem('${item.id}')">View</button>
+                        <button onclick="editItem('${item.id}')">Edit</button>
+                        <button onclick="deleteItem('${item.id}')">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Fetch items on page load
+        window.onload = () => {
+            renderTable();
+        };
+    </script>
+</body>
+</html>

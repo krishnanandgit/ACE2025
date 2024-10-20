@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+ <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+        
+    </script>
+   
+</head>
+<style>
+    body{
+  margin: 25px;
+  font-family: verdana;
+}
+
+h1{
+  color: darkslategray;
+}
+
+p {
+  font-size: 12pt;
+  color: black;
+}
+canvas {
+  height: 175px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+input {
+  font-family: verdana;
+  font-size: 12pt;
+}.column {
+  float: left;
+  width: 33.33%;
+  padding: 100px;
+  
+  
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+body{
+    position: relative;
+    left:0px;
+}
+
+</style>
+<body>
+    
+    <div class="row">
+        <center><h1 style="color: #440c54;">Upload Auction details</h1></center>
+  
+     <div class="column">
+           
+            <img src="images/auction.png" style=" width: 500px;height: 500px;">      
+        </div>
+        <div class="column" style="background-color:#cd54ee;">
+            <p style="font-size:large; ">Please Upload image you want to sell :</p>
+            <canvas id= "canv1" ></canvas>
+            <p style="font-size: large; text-align: left;" > Filename:
+            <input type="file" multiple="false" accept="image/*" id=finput onchange="upload()">
+            </P>
+            <p style="font-size: large; text-align: left;">Title:</p>
+            <input type="text">
+            <p style="font-size: large; text-align: left;">Description:</p>
+            <input type="text" style="height: 80px;"><br><br>
+            <input type="checkbox" > Send your details also 
+                
+        </div>
+      </div>
+      </div>
+    
+</body>
+<script>
+     function upload(){
+        var imgcanvas = document.getElementById("canv1");
+        var fileinput = document.getElementById("finput");
+        var image = new SimpleImage(fileinput);
+        image.drawTo(imgcanvas);
+      }
+</script>
+</html>
